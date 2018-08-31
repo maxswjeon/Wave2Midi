@@ -13,5 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\wave">
+      <UniqueIdentifier>{1bb39fbd-699b-49f7-8f32-50c4d7fa3a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\wave">
+      <UniqueIdentifier>{109faacd-29c5-4f9a-8670-bfdd79874125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\wave\exceptions">
+      <UniqueIdentifier>{0f74d632-c11d-4663-b8a6-552ea38589e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveReader.cpp">
+      <Filter>소스 파일\wave</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WaveReader.h">
+      <Filter>헤더 파일\wave</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidSizeException.h">
+      <Filter>헤더 파일\wave\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidMagicException.h">
+      <Filter>헤더 파일\wave\exceptions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

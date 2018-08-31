@@ -3,7 +3,7 @@
  * Copyright (c) 2018 Sangwan Jeon, All Rights Reserved
  */
 
-#include <boost/wave.hpp>
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <fftw3.h>
 

@@ -4,29 +4,27 @@ WaveReader::WaveReader(const void* data, size_t size) : _data(data), _size(size)
 {
 	if (_size < sizeof(WAV_RIFF_HEADER) + sizeof(WAV_SUBCHUNK_HEADER) + sizeof(WAV_SUBCHUNK_FORMAT) + sizeof(WAV_SUBCHUNK_HEADER))
 	{
-		
+		throw std::runtime_error("Wave File Size is Smaller than Header");
 	}
+
+	_subchunk_headers = std::list<WAV_SUBCHUNK_HEADER>();
+
+	
 }
 
-WAV_RIFF_HEADER WaveReader::readRiffHeader()
-{
-	WAV_RIFF_HEADER header;
-	memset(&header, 0, sizeof(header));
-	memcpy(&header, _data, sizeof(header));
-
-	header.size = changeEndian(header.size);
-
-	return header;
-}
-
-WAV_SUBCHUNK_FORMAT WaveReader::readFormatData()
+/*
+WAV_SUBCHUNK_HEADER WaveReader::GetSubchunkHeader(int index)
 {
 }
 
-int WaveReader::validateFile()
+WAV_SUBCHUNK_HEADER WaveReader::GetSubchunkHeader(char* name)
 {
 }
 
+void* WaveReader::GetSubchunk(WAV_SUBCHUNK_HEADER header)
+{
+}
+*/
 
 uint16_t WaveReader::changeEndian(uint16_t data)
 {
