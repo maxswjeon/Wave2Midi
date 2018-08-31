@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wave2Midi", "Wave2Midi\Wave2Midi.vcxproj", "{893D89AD-E48D-4B72-AE9A-629479C7B7EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Debug|x64.ActiveCfg = Debug|x64
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Debug|x64.Build.0 = Debug|x64
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Debug|x86.ActiveCfg = Debug|Win32
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Debug|x86.Build.0 = Debug|Win32
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Release|x64.ActiveCfg = Release|x64
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Release|x64.Build.0 = Release|x64
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Release|x86.ActiveCfg = Release|Win32
+		{893D89AD-E48D-4B72-AE9A-629479C7B7EA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD2004F3-8174-4199-8796-7BDE0AB1FED1}
+	EndGlobalSection
+EndGlobal
