@@ -1,10 +1,10 @@
 #pragma once
 #include <stdexcept>
 
-class InvalidSizeException : std::runtime_error
+class InvalidSizeException : std::exception
 {
 public:
-	InvalidSizeException(size_t expect, size_t found) : std::runtime_error("Invalid File Size Found")
+	InvalidSizeException(size_t expect, size_t found) : std::exception("Invalid File Size Found")
 	{
 		_expect = expect;
 		_found = found;

@@ -1,0 +1,11 @@
+#pragma once
+#pragma once
+#include <stdexcept>
+
+class EmptyListException : std::exception
+{
+public:
+	EmptyListException() : std::exception("Header List is Empty")
+	{
+	}
+};
