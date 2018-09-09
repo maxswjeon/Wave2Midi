@@ -5,7 +5,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <fftw3.h>
+//#include <fftw3.h>
 
 #include <iostream>
 #include <fstream>
