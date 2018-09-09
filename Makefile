@@ -1,19 +1,20 @@
-OBJS	= main.o wave/WaveReader.o
-SOURCE	= main.cpp wave/WaveReader.cpp
+OBJS	= Wave2Midi/main.o Wave2Midi/wave/WaveReader.o
+SOURCE	= Wave2Midi/main.cpp Wave2Midi/wave/WaveReader.cpp
 HEADER	= 
 OUT	= wav2mid
 CC	 = g++
 FLAGS	 = -g -c -Wall
 LFLAGS	 = 
+MAKE = make
 
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 
-main.o: main.cpp
-	$(CC) $(FLAGS) main.cpp 
+main.o: Wave2Midi/main.cpp
+	$(CC) $(FLAGS) Wave2Midi/main.cpp 
 
-wave/WaveReader.o: wave/WaveReader.cpp
-	$(CC) $(FLAGS) wave/WaveReader.cpp -o wave/WaveReader.o
+wave/WaveReader.o: Wave2Midi/wave/WaveReader.cpp
+	$(CC) $(FLAGS) Wave2Midi/wave/WaveReader.cpp -o Wave2Midi/wave/WaveReader.o
 
 
 clean:
