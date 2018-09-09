@@ -4,14 +4,14 @@
 class InvalidMagicException : public std::exception
 {
 public:
-	InvalidMagicException(char* expect, char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidMagicException(char* expect, char* found, size_t size = 4)
 	{
 		_size = size;
 		_expect = std::string(expect);
 		_found = std::string(found);
 	}
 
-	InvalidMagicException(unsigned char* expect, unsigned char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidMagicException(unsigned char* expect, unsigned char* found, size_t size = 4)
 	{
 		_size = size;
 		_expect = std::string((char*)expect);
