@@ -13,7 +13,7 @@ main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp 
 
 wave/WaveReader.o: wave/WaveReader.cpp
-	$(CC) $(FLAGS) wave/WaveReader.cpp 
+	$(CC) $(FLAGS) wave/WaveReader.cpp -o wave/WaveReader.o
 
 
 clean:
