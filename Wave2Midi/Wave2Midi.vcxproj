@@ -131,12 +131,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="WaveReader.cpp" />
+    <ClCompile Include="wave\WaveReader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InvalidMagicException.h" />
-    <ClInclude Include="InvalidSizeException.h" />
-    <ClInclude Include="WaveReader.h" />
+    <ClInclude Include="wave\exceptions\EmptyListException.h" />
+    <ClInclude Include="wave\exceptions\InvalidChunkException.h" />
+    <ClInclude Include="wave\exceptions\InvalidMagicException.h" />
+    <ClInclude Include="wave\exceptions\InvalidSizeException.h" />
+    <ClInclude Include="wave\WaveReader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

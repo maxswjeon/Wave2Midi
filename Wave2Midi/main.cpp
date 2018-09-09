@@ -10,6 +10,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "wave/WaveReader.h"
 
 std::string intro = "\
  /$$      /$$                       /$$$$$$  /$$      /$$ /$$       /$$\n\
@@ -38,6 +39,16 @@ int main()
 		std::cout << "Wave File Path to Convert : ";
 
 		std::getline(std::cin, filePath);
-		f = std::ifstream(filePath.c_str());
+		f = std::ifstream(filePath.c_str(), std::ios::binary | std::ios::ate);
 	}
+
+	f.seekg(0, f.end);
+	size_t length = f.tellg();
+	f.seekg(0, f.beg);
+
+	char* data = new char[length];
+	f.read(data, length);
+
+	WaveReader reader = WaveReader(data, length);
+	
 }

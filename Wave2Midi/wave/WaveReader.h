@@ -1,12 +1,12 @@
 #pragma once
-#include "InvalidMagicException.h"
-#include "InvalidChunkException.h"
-#include "EmptyListException.h"
+#include "exceptions/InvalidMagicException.h"
+#include "exceptions/InvalidChunkException.h"
+#include "exceptions/EmptyListException.h"
 
 #include <cstdint>
 #include <cstring>
 
-#include <list>
+#include <deque>
 
 typedef unsigned char uchar_t;
 
@@ -48,7 +48,6 @@ typedef struct _T_WAV_CHUNK_FORMAT
 	uint16_t align;
 	uint16_t bits_per_sample;
 	uint16_t extsize;
-	uint16_t ext;
 }WAV_CHUNK_FORMAT;
 #pragma pack(pop)
 
@@ -56,24 +55,29 @@ class WaveReader
 {
 public:
 	WaveReader(const void* data, size_t size);
+	virtual ~WaveReader();
 
 	WAV_CHUNK_HEADER GetChunkHeader(int index);
 	WAV_CHUNK_HEADER GetChunkHeader(char* name);
-	void* GetChunk(WAV_CHUNK_HEADER header);
+	void* GetChunkData(int index);
+	void* GetChunkData(char* name);
+	
 
 private:
 	const void* _data;
 	const size_t _size;
 	
 	WAV_RIFF_HEADER _riff_header;
-	std::list<WAV_CHUNK_HEADER> _subchunk_headers;
+	char* _extra_params;
+	std::deque<WAV_CHUNK_HEADER> _chunk_headers;
 	WAV_CHUNK_FORMAT _format_data;
 
 	WAV_RIFF_HEADER _readRiff();
 	WAV_CHUNK_HEADER _readChunkHeader(int offset = sizeof(WAV_RIFF_HEADER));
-	std::list<WAV_CHUNK_HEADER> _readAllChunkHeaders();
+	std::deque<WAV_CHUNK_HEADER> _readAllChunkHeaders();
 	WAV_CHUNK_FORMAT _readFormatChunk();
 
+	bool checkEndian();
 	uint16_t changeEndian(uint16_t data);
 	uint32_t changeEndian(uint32_t data);
 };

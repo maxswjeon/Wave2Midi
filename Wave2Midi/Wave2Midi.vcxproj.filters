@@ -27,18 +27,24 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="WaveReader.cpp">
+    <ClCompile Include="wave\WaveReader.cpp">
       <Filter>소스 파일\wave</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WaveReader.h">
+    <ClInclude Include="wave\WaveReader.h">
       <Filter>헤더 파일\wave</Filter>
     </ClInclude>
-    <ClInclude Include="InvalidSizeException.h">
+    <ClInclude Include="wave\exceptions\EmptyListException.h">
       <Filter>헤더 파일\wave\exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="InvalidMagicException.h">
+    <ClInclude Include="wave\exceptions\InvalidChunkException.h">
+      <Filter>헤더 파일\wave\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\exceptions\InvalidMagicException.h">
+      <Filter>헤더 파일\wave\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="wave\exceptions\InvalidSizeException.h">
       <Filter>헤더 파일\wave\exceptions</Filter>
     </ClInclude>
   </ItemGroup>
