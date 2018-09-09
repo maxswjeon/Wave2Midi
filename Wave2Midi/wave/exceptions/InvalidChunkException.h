@@ -18,7 +18,7 @@ public:
 	}
 
 
-	const char* what() const override
+	const char* what() const noexcept override
 	{
 		std::string errorString =
 			std::string("[Invalid File Magic Found] No chunk with the Magic '")

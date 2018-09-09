@@ -32,7 +32,7 @@ public:
 		_found = std::string((char*)found);
 	}
 
-	const char* what() const override
+	const char* what() const noexcept override
 	{
 		std::string errorString = 
 			std::string("[Invalid File Magic Found] File Magic Expected to be ") 

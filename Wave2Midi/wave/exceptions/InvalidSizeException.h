@@ -10,7 +10,7 @@ public:
 		_found = found;
 	}
 
-	const char* what() const override
+	const char* what() const noexcept override
 	{
 		std::string errorString = std::string("File Size Expected to be bigger than ");
 		errorString += _expect;
