@@ -4,7 +4,7 @@
 class InvalidSizeException : std::exception
 {
 public:
-	InvalidSizeException(size_t expect, size_t found) : std::exception("Invalid File Size Found")
+	InvalidSizeException(size_t expect, size_t found)
 	{
 		_expect = expect;
 		_found = found;

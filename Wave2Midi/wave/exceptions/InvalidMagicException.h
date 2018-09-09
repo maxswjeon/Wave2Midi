@@ -18,14 +18,14 @@ public:
 		_found = std::string((char*)found);
 	}
 
-	InvalidMagicException(const char* expect, char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidMagicException(const char* expect, char* found, size_t size = 4)
 	{
 		_size = size;
 		_expect = std::string(expect);
 		_found = std::string(found);
 	}
 
-	InvalidMagicException(const unsigned char* expect, unsigned char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidMagicException(const unsigned char* expect, unsigned char* found, size_t size = 4)
 	{
 		_size = size;
 		_expect = std::string((char*)expect);

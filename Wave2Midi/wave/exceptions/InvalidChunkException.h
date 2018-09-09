@@ -5,13 +5,13 @@
 class InvalidChunkException : public std::exception
 {
 public:
-	InvalidChunkException(char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidChunkException(char* found, size_t size = 4)
 	{
 		_size = size;
 		_found = std::string(found);
 	}
 
-	InvalidChunkException(unsigned char* found, size_t size = 4) : std::exception("Invalid File Magic Found")
+	InvalidChunkException(unsigned char* found, size_t size = 4)
 	{
 		_size = size;
 		_found = std::string((char*)found);
